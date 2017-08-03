@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+#pizza-container {
+  position: relative;
+  max-width: 600px;
+  max-height: 600px;
+  width: 100vw;
+  height: 100vw;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+#bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.quarter {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 50vw;
+  float: left;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .quarter {
+    width: 300px;
+    height: 300px;
+  }
+}
+.slice {
+  position: absolute;
+  display: block;
+  width: 70.71067812vw;
+  height: 70.71067812vw;
+  margin: 0px;
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+@media (min-width: 600px) {
+  .slice {
+    width: 424.26406871px;
+    height: 424.26406871px;
+  }
+}
+.slice:hover,
+.slice.checked {
+  background: #FBB67E;
+}
+.slice.checked {
+  opacity: .25;
+}
+.slice:hover {
+  opacity: .65;
+}
+.slice-a {
+  top: -35.35533906vw;
+  left: -35.35533906vw;
+}
+@media (min-width: 600px) {
+  .slice-a {
+    top: -212.13203436px;
+    left: -212.13203436px;
+  }
+}
+.slice-b {
+  top: 14.64466094vw;
+  left: 14.64466094vw;
+}
+@media (min-width: 600px) {
+  .slice-b {
+    top: 87.86796564px;
+    left: 87.86796564px;
+  }
+}
+#top-left,
+#bottom-right {
+  transform: rotate(-90deg);
+}
